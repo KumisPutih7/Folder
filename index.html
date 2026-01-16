@@ -1,7 +1,29 @@
-<script>
-fetch('./files/')
-  .then(r => r.text())
-  .then(html => {
-    document.getElementById('file-list').innerHTML = html;
-  });
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download Files</title>
+</head>
+<body>
+  <h2>Available Downloads</h2>
+  <ul id="file-list"></ul>
+
+  <script>
+    const owner = "KumisPutih7";
+    const repo = "Folder";
+    const path = "Files";
+
+    fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
+      .then(res => res.json())
+      .then(files => {
+        const list = document.getElementById("file-list");
+        files.forEach(file => {
+          if (file.type === "file") {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
+            list.appendChild(li);
+          }
+        });
+      });
+  </script>
+</body>
+</html>
