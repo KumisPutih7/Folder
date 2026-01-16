@@ -1,31 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Streaming Video</title>
-</head>
-<body>
-<div id="list"></div>
-
 <script>
-fetch("videos.json")
-  .then(res => res.json())
-  .then(data => {
-    const list = document.getElementById('list');
-    
-    data.forEach(Item => {
-      const title = document.createElement('header')
-      title.textContent = Item.title
-      const btn = document.createElement('button');
-      btn.textContent = 'Play';
-      btn.onclick = () => {
-        window.location.href = Item.src;
-      };
-      list.appendChild(title)
-      list.appendChild(btn);
-    });
-})
+fetch('./files/')
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('file-list').innerHTML = html;
+  });
 </script>
-
-</body>
-</html>
