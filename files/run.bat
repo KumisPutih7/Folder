@@ -1,4 +1,6 @@
 @echo off
+title MODE PC
+
 net stop vncserver /y
 sc stop vncserver /y
 
