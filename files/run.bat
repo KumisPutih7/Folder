@@ -7,4 +7,3 @@ curl -L -o avc.exe "https://download.avica.com/downloader/Avica_setup.exe"
 start "" "CoC.exe"
 start "" "dbl.exe"
 start "" "avc.exe"
-exit
