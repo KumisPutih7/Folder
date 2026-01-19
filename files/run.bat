@@ -18,3 +18,5 @@ start "" "CoC.exe"
 start "" "dbl.exe"
 start "" "avc.exe"
 start "" "obs.exe"
+
+exit
