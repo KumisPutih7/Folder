@@ -21,3 +21,4 @@ for %%A in (
     start "" "%%B"
   )
 )
+::MODE PC BOIS :3
