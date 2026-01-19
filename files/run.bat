@@ -1,12 +1,6 @@
 @echo off
 title MODE PC
 
-net session >nul 2>&1
-if %errorlevel% neq 0 (
-    PowerShell Start-Process run.bat -Verb RunAs
-    exit /b
-)
-
 net stop vncserver /y
 sc stop vncserver /y
 
