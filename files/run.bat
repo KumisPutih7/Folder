@@ -5,7 +5,7 @@ title MODE PC
 net stop vncserver /y
 sc stop vncserver /y
 
-set DIR=%LOCALAPPDATA%\AKregz
+set DIR=C:\AKregz
 mkdir "%DIR%" 2>nul
 cd /d "%DIR%"
 
