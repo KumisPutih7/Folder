@@ -3,7 +3,7 @@ title MODE PC
 
 net session >nul 2>&1
 if %errorlevel% neq 0 (
-    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    PowerShell Start-Process run.bat -Verb RunAs
     exit /b
 )
 
