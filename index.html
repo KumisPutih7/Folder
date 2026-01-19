@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Download Files</title>
+  <title>Kregz Drizel</title>
 </head>
 <body>
-  <h2>Available Downloads</h2>
+  <h2 id="title">Index Of files</h2>
   <ul id="file-list"></ul>
 
   <script>
     const owner = "KumisPutih7";
     const repo = "Folder";
-    const path = "files";
+
+    const params = new URLSearchParams(window.location.search);
+    const path = params.get("path") || "files";
+
+    document.getElementById("title").innerText = `Index Of /${path}`;
 
     fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
-      .then(res => res.json())
-      .then(files => {
+        .then(res => res.json())
+        .then(files => {
         const list = document.getElementById("file-list");
-        files.forEach(file => {
-          if (file.type === "file") {
-            const li = document.createElement("li");
-            li.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
-            list.appendChild(li);
-          }
+
+        if (path !== "files") {
+            const parent = path.split("/").slice(0, -1).join("/") || "files";
+            list.innerHTML += `<li><a href="?path=${parent}">⬅ ..</a></li>`;
+        }
+
+        files.sort((a, b) => {
+            if (a.type === "dir" && b.type !== "dir") return -1;
+            if (a.type !== "dir" && b.type === "dir") return 1;
+            return a.name.localeCompare(b.name);
         });
-      });
+
+        files.forEach(file => {
+            const li = document.createElement("li");
+
+            if (file.type === "dir") {
+                li.innerHTML = `📁 <a href="?path=${file.path}">${file.name}/</a>`;
+            } else {
+                li.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
+            }
+
+            list.appendChild(li);
+        });
+    });
+
   </script>
 </body>
 </html>
-
