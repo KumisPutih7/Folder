@@ -21,7 +21,7 @@ for %%A in (
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
   "avc.exe|https://download.avica.com/downloader/Avica_setup.exe"
   "selen.zip|https://files.catbox.moe/5pwj8a.zip"
-  "retro.zip|https://github.com/KumisPutih7/Folder/blob/main/files/Desktop/RetroBar.zip"
+  "retro.zip|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/RetroBar.zip"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
     curl -L -o "%%B" "%%C"
@@ -34,6 +34,7 @@ for %%A in (
   )
 )
 
-start "" "C:\AKregz\RetroBar\RetroBar.exe"
-start "" "C:\AKregz\Selen UI\seelen-ui.exe"
+start "" "%DIR%\RetroBar\RetroBar.exe"
+start "" "%DIR%\Selen UI\seelen-ui.exe"
+
 ::MODE PC BOIS :3
