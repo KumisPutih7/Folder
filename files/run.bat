@@ -20,7 +20,7 @@ for %%A in (
   "CoC.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
   "avc.exe|https://download.avica.com/downloader/Avica_setup.exe"
-  "selen.exe|https://github.com/eythaann/Seelen-UI/releases/download/v2.4.11/Seelen.UI_2.4.11_x64-setup.exe"
+  "selen.zip|https://files.catbox.moe/5pwj8a.zip"
   "retro.zip|https://github.com/KumisPutih7/Folder/blob/main/files/Desktop/RetroBar.zip"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
@@ -35,4 +35,5 @@ for %%A in (
 )
 
 start "" "%~dp0RetroBar\RetroBar.exe"
+start "" "%~dp0Selen UI\seelen-ui.exe"
 ::MODE PC BOIS :3
