@@ -20,11 +20,19 @@ for %%A in (
   "CoC.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
   "avc.exe|https://download.avica.com/downloader/Avica_setup.exe"
+  "https://github.com/eythaann/Seelen-UI/releases/download/v2.4.11/Seelen.UI_2.4.11_x64-setup.exe"
+  "https://github.com/dremin/RetroBar/releases/download/v1.21.32/RetroBar.Installer.zip"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
     curl -L -o "%%B" "%%C"
-    TIMEOUT /T 1
-    start "" "%%B"
+    timeout /t 1 >nul
+    if /I "%%~xB"==".exe" (
+        start "" "%%B"
+    ) else if /I "%%~xB"==".zip" (
+        tar -xf %%B
+    )
   )
 )
+
+start "" "RetroBarInstaller.exe"
 ::MODE PC BOIS :3
