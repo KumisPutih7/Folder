@@ -37,4 +37,4 @@ for %%A in (
 start "" "%DIR%\RetroBar\RetroBar.exe"
 start "" "%DIR%\Seelen UI\seelen-ui.exe"
 
-::MODE PC BOIS :3
+::MODE PC BOIS :3 gak work anjc
