@@ -21,7 +21,7 @@ for %%A in (
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
   "avc.exe|https://download.avica.com/downloader/Avica_setup.exe"
   "selen.exe|https://github.com/eythaann/Seelen-UI/releases/download/v2.4.11/Seelen.UI_2.4.11_x64-setup.exe"
-  "retro.zip|https://github.com/dremin/RetroBar/releases/download/v1.21.32/RetroBar.Installer.zip"
+  "retro.zip|https://github.com/KumisPutih7/Folder/blob/main/files/Desktop/RetroBar.zip"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
     curl -L -o "%%B" "%%C"
@@ -34,5 +34,5 @@ for %%A in (
   )
 )
 
-start "" "RetroBarInstaller.exe"
+start "" "%~dp0RetroBar\RetroBar.exe"
 ::MODE PC BOIS :3
