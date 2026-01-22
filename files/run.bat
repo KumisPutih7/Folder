@@ -35,6 +35,6 @@ for %%A in (
 )
 
 start "" "%DIR%\RetroBar\RetroBar.exe"
-start "" "%DIR%\Selen UI\seelen-ui.exe"
+start "" "%DIR%\Seelen UI\seelen-ui.exe"
 
 ::MODE PC BOIS :3
