@@ -4,6 +4,7 @@ title MODE PC
 
 net stop vncserver /y
 sc stop vncserver /y
+
 net stop tvnserver /y
 sc stop tvnserver /y
 
@@ -18,7 +19,9 @@ for %%P in (SteamHelperEN.exe SteamHelperEN-old.exe SteamHelperENv2.exe SteamHel
     ) 
 )
 
-start "" "steam://open/main"
+taskkill /f /im steam.exe
+timeout /t 3
+start "" "W:\Steamonline_new\steam.exe"
 
 for %%A in (
   "CoC.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
@@ -40,6 +43,9 @@ for %%A in (
 
 start "" "%DIR%\RetroBar\RetroBar.exe"
 TIMEOUT /T 3
+
 ::start "" "%DIR%\Seelen UI\seelen-ui.exe"
 
+
 ::MODE PC BOIS :3 gak work anjc
+powershell -NoProfile -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Setup Successfully, Seelen Ui didnt start yet pls start manualy at AKregz folder, amd STEAM BETA ALREADY STEUP :3','Kregz Installer')"
