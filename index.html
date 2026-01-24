@@ -2,49 +2,76 @@
 <html>
 <head>
   <title>Kregz Drizel</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-  <h2 id="title">Index Of files</h2>
-  <ul id="file-list"></ul>
+  <div class="container">
+    <h2 id="title">Index Of files</h2>
+    <form class="search">
+      <input type="text" name="q" placeholder="Search" id="searchInput">
+    </form>
+    <ul id="file-list"></ul>
+  </div>
 
   <script>
     const owner = "KumisPutih7";
     const repo = "Folder";
 
-    const params = new URLSearchParams(window.location.search);
-    const path = params.get("path") || "files";
+    // Ambil path dari URL, hapus "/" di awal
+    let path = window.location.pathname.slice(1); 
+    if (!path) path = "files"; // default folder
 
     document.getElementById("title").innerText = `Index Of /${path}`;
 
     fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
-        .then(res => res.json())
-        .then(files => {
+      .then(res => res.json())
+      .then(data => {
         const list = document.getElementById("file-list");
 
-        if (path !== "files") {
-            const parent = path.split("/").slice(0, -1).join("/") || "files";
-            list.innerHTML += `<li><a href="?path=${parent}">⬅ ..</a></li>`;
+        // Jika response adalah file langsung, redirect ke download
+        if (data.type === "file") {
+          window.location.href = data.download_url;
+          return;
         }
 
-        files.sort((a, b) => {
-            if (a.type === "dir" && b.type !== "dir") return -1;
-            if (a.type !== "dir" && b.type === "dir") return 1;
-            return a.name.localeCompare(b.name);
+        // Tambahkan navigasi ke parent folder jika bukan root
+        if (path !== "files") {
+          const parent = path.split("/").slice(0, -1).join("/") || "files";
+          list.innerHTML += `<li>⬅ <a href="/${parent}">..</a></li>`;
+        }
+
+        // Sort: folder dulu, baru file
+        data.sort((a, b) => {
+          if (a.type === "dir" && b.type !== "dir") return -1;
+          if (a.type !== "dir" && b.type === "dir") return 1;
+          return a.name.localeCompare(b.name);
         });
 
-        files.forEach(file => {
-            const li = document.createElement("li");
-
-            if (file.type === "dir") {
-                li.innerHTML = `📁 <a href="?path=${file.path}">${file.name}/</a>`;
-            } else {
-                li.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
-            }
-
-            list.appendChild(li);
+        // Tampilkan folder & file
+        data.forEach(file => {
+          const li = document.createElement("li");
+          if (file.type === "dir") {
+            li.innerHTML = `📁 <a href="/${file.path}">${file.name}/</a>`;
+          } else {
+            li.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
+          }
+          list.appendChild(li);
         });
+      })
+      .catch(err => {
+        document.getElementById("file-list").innerHTML = "<li>Error loading files</li>";
+        console.error(err);
+      });
+
+    // Opsional: search/filter
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", () => {
+      const filter = searchInput.value.toLowerCase();
+      document.querySelectorAll("#file-list li").forEach(li => {
+        const text = li.innerText.toLowerCase();
+        li.style.display = text.includes(filter) ? "" : "none";
+      });
     });
-
   </script>
 </body>
 </html>
