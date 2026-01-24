@@ -4,6 +4,8 @@ title MODE PC
 
 net stop vncserver /y
 sc stop vncserver /y
+net stop tvnserver /y
+sc stop tvnserver /y
 
 set DIR=C:\AKregz
 mkdir "%DIR%" 2>nul
