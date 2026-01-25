@@ -32,7 +32,6 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 for %%A in (
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
-  "avc.exe|https://download.avica.com/downloader/Avica_setup.exe"
   "retro.zip|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/RetroBar.zip"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
