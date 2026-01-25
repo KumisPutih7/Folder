@@ -30,6 +30,10 @@ start "" "G:\Steamonline_new\steam.exe"
 
 nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
+::Fixing COC FC
+curl -L -o WowokBrowser.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
+start "" "WowokBrowser.exe" /silent /install
+
 for %%A in (
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
   "retro.zip|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/RetroBar.zip"
