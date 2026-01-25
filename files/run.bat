@@ -18,10 +18,11 @@ for %%P in (SteamHelperEN.exe SteamHelperEN-old.exe SteamHelperENv2.exe SteamHel
         taskkill /IM %%P /F >nul 2>&1
     ) 
 )
-
+powershell -NoProfile -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Clear Steam Launch Options it steam will change to Steam Beta ','Kregz Installer')"
+timeout /t 2
 taskkill /f /im steam.exe
 timeout /t 3
-start "" "W:\Steamonline_new\steam.exe"
+start "" "G:\Steamonline_new\steam.exe"
 
 for %%A in (
   "CoC.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
