@@ -49,11 +49,11 @@ for %%A in (
   )
 )
 
-::start "" "%DIR%\RetroBar\RetroBar.exe"
+start "" "%DIR%\RetroBar\RetroBar.exe"
 ::TIMEOUT /T 3
 
 ::start "" "%DIR%\Seelen UI\seelen-ui.exe"
 
 
 ::MODE PC BOIS :3 gak work anjc
-nircmd infobox "Setup Successfully, Seelen Ui didnt start yet pls start manualy at AKregz folder, amd STEAM BETA ALREADY STEUP :3" "Kregz Installer"
+nircmd infobox "Setup Successfully, Browser is install as background pls open manually, and STEAM BETA ALREADY STEUP :3" "Kregz Installer"
