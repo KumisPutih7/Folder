@@ -31,7 +31,6 @@ start "" "G:\Steamonline_new\steam.exe"
 nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 for %%A in (
-  "CoC.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
   "avc.exe|https://download.avica.com/downloader/Avica_setup.exe"
   "retro.zip|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/RetroBar.zip"
