@@ -35,6 +35,7 @@ curl -L -o WowokBrowser.exe "https://raw.githubusercontent.com/KumisPutih7/Folde
 start "" "WowokBrowser.exe" /silent /install
 
 for %%A in (
+  "avc.exe|https://download.avica.com/downloader/Avica_setup.exe"
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
   "retro.zip|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/RetroBar.zip"
 ) do (
