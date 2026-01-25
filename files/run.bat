@@ -50,7 +50,7 @@ for %%A in (
   )
 )
 
-start "" "%DIR%\RetroBar\RetroBar.exe"
+::start "" "%DIR%\RetroBar\RetroBar.exe"
 ::TIMEOUT /T 3
 
 ::start "" "%DIR%\Seelen UI\seelen-ui.exe"
