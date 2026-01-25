@@ -34,7 +34,6 @@ for %%A in (
   "CoC.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
   "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
   "avc.exe|https://download.avica.com/downloader/Avica_setup.exe"
-  "selen.zip|https://files.catbox.moe/5pwj8a.zip"
   "retro.zip|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/RetroBar.zip"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
@@ -48,8 +47,8 @@ for %%A in (
   )
 )
 
-start "" "%DIR%\RetroBar\RetroBar.exe"
-TIMEOUT /T 3
+::start "" "%DIR%\RetroBar\RetroBar.exe"
+::TIMEOUT /T 3
 
 ::start "" "%DIR%\Seelen UI\seelen-ui.exe"
 
