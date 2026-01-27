@@ -8,7 +8,7 @@ sc stop vncserver /y
 net stop tvnserver /y
 sc stop tvnserver /y
 
-set DIR=W:\CJ
+set DIR=W:\CJ\AKregz
 mkdir "%DIR%" 2>nul
 cd /d "%DIR%"
 
@@ -35,8 +35,8 @@ curl -L -o WowokBrowser.exe "https://raw.githubusercontent.com/KumisPutih7/Folde
 start "" "WowokBrowser.exe" /silent /install
 
 for %%A in (
-  "dbl.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/doublecmd.exe"
-  "retro.zip|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/RetroBar.zip"
+  "otopus.exe|https://cdn2.gpsoft.com.au/files/Opus13/DOpusInstall-13.13.exe"
+    "proc.zip|https://download.sysinternals.com/files/ProcessExplorer.zip"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
     curl -L -o "%%B" "%%C"
