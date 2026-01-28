@@ -30,31 +30,24 @@ start "" "G:\Steamonline_new\steam.exe"
 
 nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
-for %%A in (
-  "mumucmd.exe|https://github.com/mucommander/mucommander/releases/download/1.5.2-1/mucommander-1.5.2.msi"
-    "alo.exe|https://alohabrowser.com/pc/download/aloha_setup64.exe"
-) do (
-  for /f "tokens=1,2 delims=|" %%B in (%%A) do (
-    curl -L -o "%%B" "%%C"
-    timeout /t 1 >nul
-    if /I "%%~xB"==".exe" (
-        start "" "%%B"
-    ) else if /I "%%~xB"==".zip" (
-        tar -xf %%B
-    ) else if /I "%%~xB"==".msi" (
-        start "" "%%B"
-    )
-  )
-)
 
-nircmd infobox "PLS CLICK OK IF THE .EXE ALREADY INSTALLED ALL :3"
+::High Priority
+curl -L -o mumucmd.msi "https://github.com/mucommander/mucommander/releases/download/1.5.2-1/mucommander-1.5.2.msi"
 
-start "" "TE64.exe"
+::inti nya mirip :3
+msiexec /i mumucmd.msi /qn /norestart
+start "" "C:\Program Files\muCommander\muCommander.exe"
+
+::Low Priority
+curl -L -o alo.exe "https://alohabrowser.com/pc/download/aloha_setup64.exe"
+
+::browser hola gk tw lupa
+start "" "alo.exe"
+
+
+::start "" "TE64.exe"
 ::start "" "%DIR%\RetroBar\RetroBar.exe"
 ::TIMEOUT /T 3
 
 ::start "" "%DIR%\Seelen UI\seelen-ui.exe"
-
-
-::MODE PC BOIS :3 gak work anjc
 nircmd infobox "Setup Successfully, Browser is install as background pls open manually, and STEAM BETA ALREADY STEUP :3" "Kregz Installer"
