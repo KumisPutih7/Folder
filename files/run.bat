@@ -31,7 +31,7 @@ start "" "G:\Steamonline_new\steam.exe"
 nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 for %%A in (
-  "far.msi|https://farmanager.com/files/Far30b6600.x64.20251124.msi"
+  "tab.zip|https://github.com/tablacus/TablacusExplorer/releases/download/25.12.31/te251231.zip"
     "alo.exe|https://alohabrowser.com/pc/download/aloha_setup64.exe"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
@@ -47,6 +47,7 @@ for %%A in (
   )
 )
 
+start "" "TE64.exe"
 ::start "" "%DIR%\RetroBar\RetroBar.exe"
 ::TIMEOUT /T 3
 
