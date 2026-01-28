@@ -31,7 +31,7 @@ start "" "G:\Steamonline_new\steam.exe"
 nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 for %%A in (
-  "tab.zip|https://github.com/tablacus/TablacusExplorer/releases/download/25.12.31/te251231.zip"
+  "mumucmd.exe|https://github.com/mucommander/mucommander/releases/download/1.5.2-1/mucommander-1.5.2.msi"
     "alo.exe|https://alohabrowser.com/pc/download/aloha_setup64.exe"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
@@ -46,6 +46,8 @@ for %%A in (
     )
   )
 )
+
+nircmd infobox "PLS CLICK OK IF THE .EXE ALREADY INSTALLED ALL :3"
 
 start "" "TE64.exe"
 ::start "" "%DIR%\RetroBar\RetroBar.exe"
