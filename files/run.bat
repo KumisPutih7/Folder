@@ -8,7 +8,7 @@ sc stop vncserver /y
 net stop tvnserver /y
 sc stop tvnserver /y
 
-set DIR=W:\CJ\AKregz
+set DIR=W:\AKregz
 mkdir "%DIR%" 2>nul
 cd /d "%DIR%"
 
@@ -30,13 +30,9 @@ start "" "G:\Steamonline_new\steam.exe"
 
 nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
-::Fixing COC FC
-curl -L -o WowokBrowser.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/CocCocSetup.exe"
-start "" "WowokBrowser.exe" /silent /install
-
 for %%A in (
-  "otopus.exe|https://cdn2.gpsoft.com.au/files/Opus13/DOpusInstall-13.13.exe"
-    "proc.zip|https://download.sysinternals.com/files/ProcessExplorer.zip"
+  "qdir.exe|https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Q-Dir_Installer_UC.exe"
+    "alo.exe|https://alohabrowser.com/pc/download/aloha_setup64.exe"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
     curl -L -o "%%B" "%%C"
