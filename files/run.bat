@@ -31,7 +31,7 @@ start "" "G:\Steamonline_new\steam.exe"
 nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 for %%A in (
-  "qdir.msi|https://github.com/mucommander/mucommander/releases/download/1.5.2-1/mucommander-1.5.2.msi"
+  "far.msi|https://farmanager.com/files/Far30b6600.x64.20251124.msi"
     "alo.exe|https://alohabrowser.com/pc/download/aloha_setup64.exe"
 ) do (
   for /f "tokens=1,2 delims=|" %%B in (%%A) do (
