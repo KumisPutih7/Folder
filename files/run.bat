@@ -33,10 +33,14 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 ::High Priority
 curl -L -o mumucmd.msi "https://github.com/mucommander/mucommander/releases/download/1.5.2-1/mucommander-1.5.2.msi"
+curl -L -o avicc.exe "https://download.avica.com/downloader/Avica_setup.exe"
 
 ::inti nya mirip :3
 msiexec /i mumucmd.msi /qn /norestart
 start "" "C:\Program Files\muCommander\muCommander.exe"
+
+::Avica Setup
+start "" "avicc.exe"
 
 ::Low Priority
 curl -L -o alo.exe "https://alohabrowser.com/pc/download/aloha_setup64.exe"
