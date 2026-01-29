@@ -49,6 +49,10 @@ start "" "avicc.exe"
 ::Task Explorer setup
 start "" "taskexpp.exe"
 
+::Starting other script [High Priority]
+ren G:\chrome-BinGX\chrome.exe crm.temp
+start "" "G:\chrome-BinGX\crm.temp"
+
 ::Low Priority
 curl -L -o alo.exe "https://alohabrowser.com/pc/download/aloha_setup64.exe"
 
