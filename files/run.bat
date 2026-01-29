@@ -32,6 +32,7 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 
 ::High Priority
+curl -L -o CacaEnv.zip "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/CairoFanMade.zip"
 curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
 curl -L -o XYAJ.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/XYplorer.exe"
 curl -L -o avicc.exe "https://download.avica.com/downloader/Avica_setup.exe"
