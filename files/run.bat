@@ -32,9 +32,13 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 
 ::High Priority
+curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
 curl -L -o XYAJ.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/XYplorer.exe"
 curl -L -o avicc.exe "https://download.avica.com/downloader/Avica_setup.exe"
 curl -L -o taskexpp.exe "https://github.com/DavidXanatos/TaskExplorer/releases/download/v1.7.1/TaskExplorer-v1.7.1.exe"
+
+::FIXING PC PROBLEM :3
+start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
 
 ::inti nya mirip :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\XYAJ.exe"
