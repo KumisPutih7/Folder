@@ -34,15 +34,14 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 ::High Priority
 curl -L -o CacaEnv.zip "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/CairoFanMade.zip"
 curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
-curl -L -o XYAJ.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/XYplorer.exe"
-curl -L -o avicc.exe "https://download.avica.com/downloader/Avica_setup.exe"
+curl -L -o Tako.exe "https://www.gpsoft.com.au/download/release"
 curl -L -o taskexpp.exe "https://github.com/DavidXanatos/TaskExplorer/releases/download/v1.7.1/TaskExplorer-v1.7.1.exe"
 
 ::FIXING PC PROBLEM :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
 
 ::inti nya mirip :3
-start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\XYAJ.exe"
+start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\Tako.exe"
 
 ::Avica Setup
 start "" "avicc.exe"
@@ -55,10 +54,10 @@ tar -xf CacaEnv.zip
 start "" "%DIR%\win-x64\CAcaEnv.exe"
 
 ::Low Priority
-curl -L -o alo.exe "https://alohabrowser.com/pc/download/aloha_setup64.exe"
+curl -L -o whale.exe "https://installer-whale.pstatic.net/downloads/installers/WhaleSetup.exe"
 
-::browser hola gk tw lupa
-start "" "alo.exe"
+::Brosar
+start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\whale.exe"
 
 
 ::start "" "TE64.exe"
