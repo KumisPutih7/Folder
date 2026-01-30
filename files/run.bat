@@ -35,7 +35,6 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 curl -L -o CacaEnv.zip "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/CairoFanMade.zip"
 curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
 curl -L -o Tako.exe "https://www.gpsoft.com.au/download/release"
-curl -L -o taskexpp.exe "https://github.com/DavidXanatos/TaskExplorer/releases/download/v1.7.1/TaskExplorer-v1.7.1.exe"
 
 ::FIXING PC PROBLEM :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
@@ -43,11 +42,6 @@ start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
 ::inti nya mirip :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\Tako.exe"
 
-::Avica Setup
-start "" "avicc.exe"
-
-::Task Explorer setup
-start "" "taskexpp.exe"
 
 ::Starting other script [High Priority]
 tar -xf CacaEnv.zip
