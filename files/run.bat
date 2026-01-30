@@ -32,6 +32,7 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 
 
 ::High Priority
+curl -L -o KregzPlorer.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/KregzPlorer.exe"
 curl -L -o CacaEnv.zip "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/CairoFanMade.zip"
 curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
 curl -L -o XYAJ.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/XYplorer.exe"
@@ -43,6 +44,9 @@ start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
 
 ::inti nya mirip :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\XYAJ.exe"
+
+::Kregz Plorer :DDDD
+start "" "KregzPlorer.exe"
 
 ::Avica Setup
 start "" "avicc.exe"
