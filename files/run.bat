@@ -48,11 +48,10 @@ tar -xf CacaEnv.zip
 start "" "%DIR%\win-x64\CAcaEnv.exe"
 
 ::Low Priority
-curl -L -o whale.exe "https://installer-whale.pstatic.net/downloads/installers/WhaleSetup.exe"
+curl -L -o tono.exe "https://github.com/maxthon/Maxthon/releases/download/7.3.1.8600/maxthon_7.3.1.8600_x64.exe"
 
 ::Brosar
-start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\whale.exe"
-
+start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\tono.exe"
 
 ::start "" "TE64.exe"
 ::start "" "%DIR%\RetroBar\RetroBar.exe"
