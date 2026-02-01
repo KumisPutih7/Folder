@@ -12,7 +12,7 @@ set DIR=W:\AKregz
 mkdir "%DIR%" 2>nul
 cd /d "%DIR%"
 
-for %%P in (SteamHelperEN.exe SteamHelperEN-old.exe SteamHelperENv2.exe SteamHelperENv2.2.exe adlin.exe dbntlocalvnc.exe) do (
+for %%P in (SteamHelperEN.exe SteamHelperEN-old.exe SteamHelperENv2.exe SteamHelperENv2.2.exe adlin.exe dbntlocalvnc.exe dyportholder.exe) do (
     tasklist | find /i "%%P" >nul
     if %errorlevel%==0 (
         taskkill /IM %%P /F >nul 2>&1
