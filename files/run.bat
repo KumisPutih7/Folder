@@ -34,13 +34,13 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 ::High Priority
 curl -L -o CacaEnv.zip "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/CairoFanMade.zip"
 curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
-curl -L -o Tako.exe "https://www.gpsoft.com.au/download/release"
+curl -L -o qdir.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Q-Dir_Installer_UC.exe"
 
 ::FIXING PC PROBLEM :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
 
 ::inti nya mirip :3
-start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\Tako.exe"
+start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\qdir.exe"
 
 
 ::Starting other script [High Priority]
@@ -48,10 +48,8 @@ tar -xf CacaEnv.zip
 start "" "%DIR%\win-x64\CAcaEnv.exe"
 
 ::Low Priority
-curl -L -o tono.exe "https://github.com/maxthon/Maxthon/releases/download/7.3.1.8600/maxthon_7.3.1.8600_x64.exe"
 
 ::Brosar
-start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\tono.exe"
 
 ::start "" "TE64.exe"
 ::start "" "%DIR%\RetroBar\RetroBar.exe"
