@@ -22,10 +22,12 @@
 
     document.getElementById("title").innerText = `Index Of /${path}`;
 
+    const list = document.getElementById("file-list");
+    
     fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
         .then(res => res.json())
         .then(files => {
-        const list = document.getElementById("file-list");
+        
 
         if (path !== "files") {
             const parent = path.split("/").slice(0, -1).join("/") || "files";
@@ -44,13 +46,31 @@
             if (file.type === "dir") {
                 li.innerHTML = `📁 <a href="?path=${file.path}">${file.name}/</a>`;
             } else {
-                li.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
+                li.innerHTML = `📄 <a href="${file.download_url}">${file.name}</a>`;
             }
 
             list.appendChild(li);
         });
     });
 
+    fetch(`https://api.github.com/repos/${owner}/${repo}/contents/files/data/list.json`)
+      .then(res => res.json())
+      .then(data => {
+    
+        data.items.forEach(item => {
+          const li = document.createElement("li");
+    
+          if (item.type === "folder") {
+            li.innerHTML = `📁 <a href="?path=${item.path}">${item.name}/</a>`;
+          } else {
+            li.innerHTML = `📄 <a href="${item.url}" target="_blank">${item.name}</a>`;
+          }
+    
+          list.appendChild(li);
+        });
+    });
+
   </script>
 </body>
 </html>
+
