@@ -40,7 +40,7 @@ curl -L -o qdir.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/f
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
 
 ::inti nya mirip :3
-start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\qdir.exe"
+start "" "qdir.exe"
 
 
 ::Starting other script [High Priority]
