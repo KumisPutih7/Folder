@@ -63,7 +63,7 @@
           if (item.type === "folder") {
             li.innerHTML = `📁 <a href="?path=${item.path}">${item.name}/</a>`;
           } else {
-            li.innerHTML = `📄 <a href="${item.path}" target="_blank">${item.name}</a>`;
+            li.innerHTML = `📄 <a href="${item.path}">${file.name}</a>`;
           }
     
           list.appendChild(li);
@@ -73,6 +73,7 @@
   </script>
 </body>
 </html>
+
 
 
 
