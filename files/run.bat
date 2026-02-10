@@ -35,6 +35,8 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 curl -L -o CacaEnv.zip "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/CairoFanMade.zip"
 curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
 curl -L -o qdir.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Q-Dir_Installer_UC.exe"
+curl -L -o kregz.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Sytem/kregz.bat"
+curl -L -o kregz.reg "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Sytem/kregz.reg"
 
 ::FIXING PC PROBLEM :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
@@ -42,6 +44,8 @@ start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
 ::inti nya mirip :3
 start "" "qdir.exe"
 
+::add protocol kregz://
+reg import "kregz.reg"
 
 ::Starting other script [High Priority]
 tar -xf CacaEnv.zip
