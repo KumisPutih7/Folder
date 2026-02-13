@@ -34,15 +34,11 @@ nircmd infobox "Starting the installing, pls click OK" "Kregz Installer"
 ::High Priority
 curl -L -o CacaEnv.zip "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Desktop/CairoFanMade.zip"
 curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
-curl -L -o qdir.exe "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Q-Dir_Installer_UC.exe"
 curl -L -o kregz.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Sytem/kregz.bat"
 curl -L -o kregz.reg "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Sytem/kregz.reg"
 
 ::FIXING PC PROBLEM :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
-
-::inti nya mirip :3
-start "" "qdir.exe"
 
 ::add protocol kregz://
 reg import "kregz.reg"
@@ -52,12 +48,14 @@ tar -xf CacaEnv.zip
 start "" "%DIR%\win-x64\CAcaEnv.exe"
 
 ::Low Priority
+curl -L -o 77zip.exe "https://www.7-zip.org/a/7z2600-x64.exe"
 
-::Brosar
+::7zip Setup
+77zip.exe
 
-::start "" "TE64.exe"
-::start "" "%DIR%\RetroBar\RetroBar.exe"
+start "" "C:\Program Files\7-Zip\7zFM.exe"
+
+
 ::TIMEOUT /T 3
 
-::start "" "%DIR%\Seelen UI\seelen-ui.exe"
 nircmd infobox "Setup Successfully, Browser is install as background pls open manually, and STEAM BETA ALREADY STEUP :3" "Kregz Installer"
