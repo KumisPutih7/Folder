@@ -36,6 +36,7 @@ curl -L -o CacaEnv.zip "https://raw.githubusercontent.com/KumisPutih7/Folder/mai
 curl -L -o FixPC.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/FixPC.bat"
 curl -L -o kregz.bat "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Sytem/kregz.bat"
 curl -L -o kregz.reg "https://raw.githubusercontent.com/KumisPutih7/Folder/main/files/Sytem/kregz.reg"
+curl -L -o eco.exe "https://app-cms-repo.ecosia-browser.net/144548e4-670e-46ef-be30-8d14ad305f19/build/1.0.0.38/EcosiaInstaller.exe"
 
 ::FIXING PC PROBLEM :3
 start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
@@ -43,6 +44,7 @@ start "" "W:\CJ\RunAsAdmin.exe" /cmd "%DIR%\FixPC.bat"
 ::add protocol kregz://
 reg import "kregz.reg"
 
+start "" "eco.exe"
 ::Starting other script [High Priority]
 tar -xf CacaEnv.zip
 start "" "%DIR%\win-x64\CAcaEnv.exe"
